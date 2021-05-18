@@ -1,8 +1,16 @@
 package com.backgammon;
 
+import com.backgammon.gui.GUI;
+
+import javax.swing.*;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Welcome to the Backgammon Game!");
+        JFrame gameFrame = new JFrame();
+        gameFrame.setTitle("Backgammon game");
+        gameFrame.setSize(800, 600);
+        gameFrame.add(new GUI());
+        gameFrame.setVisible(true);
     }
 }

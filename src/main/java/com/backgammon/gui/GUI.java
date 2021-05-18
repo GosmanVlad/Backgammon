@@ -1,4 +1,10 @@
 package com.backgammon.gui;
 
-public class GUI {
+import javax.swing.*;
+
+public class GUI extends JPanel {
+
+    public GUI() {
+
+    }
 }
