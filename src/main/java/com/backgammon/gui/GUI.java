@@ -1,6 +1,7 @@
 package com.backgammon.gui;
 
 import com.backgammon.game.Game;
+import com.backgammon.game.Table;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,8 +15,17 @@ public class GUI extends JPanel {
     private ArrayList<Integer> topSlots;
     private ArrayList<Integer> bottomSlots;
     private Game game;
-    public GUI() {
+
+    public GUI(Game game) {
+        this.game = game;
         topSlots = new ArrayList<Integer>();
+        bottomSlots = new ArrayList<Integer>();
+
+        createTopSlots();
+        createBottomSlots();
+    }
+
+    public void createTopSlots() {
         topSlots.add(14);
         topSlots.add(15);
         topSlots.add(16);
@@ -30,8 +40,9 @@ public class GUI extends JPanel {
         topSlots.add(25);
         topSlots.add(26);
         topSlots.add(27);
+    }
 
-        bottomSlots = new ArrayList<Integer>();
+    public void createBottomSlots() {
         bottomSlots.add(13);
         bottomSlots.add(12);
         bottomSlots.add(11);
@@ -47,6 +58,7 @@ public class GUI extends JPanel {
         bottomSlots.add(1);
         bottomSlots.add(0);
     }
+
     @Override
     public void paint(Graphics table) {
         Image bufferImage = createImage(860, 654);
@@ -64,6 +76,12 @@ public class GUI extends JPanel {
 
         int width = 860;
         int height = 654;
+        Table board = new Table();
+        for(int pieceID = 0; pieceID < 28; pieceID++) {
+            board.getSlots().get(pieceID).setStones(game.getTable().getSlots().get(pieceID).getStones());
+            board.getSlots().get(pieceID).setColor(game.getTable().getSlots().get(pieceID).getColor());
+        }
+
         table.setColor(Color.gray);
         table.fillRect(0, 0, width, height);
         table.setColor(new Color(255, 255, 204));
@@ -74,10 +92,24 @@ public class GUI extends JPanel {
         table.setColor(new Color(255, 255, 204));//cream color
         table.fillRect(width - 90, 30, 60, height - 59);
 
-        printTable(table, 30, 84, 57, 30, 300, topSlots, 0);
-        printTable(table, 414, 468, 441, 30, 300, topSlots, 7);
-        printTable(table, 30, 84, 57, height - 29, height - 298, bottomSlots, 0);
-        printTable(table, 414, 468, 441, height - 29, height - 298, bottomSlots, 7);
+        printTable(table, 30, 84, 57, 30, 300, topSlots, 0, board, true, 29);
+        printTable(table, 414, 468, 441, 30, 300, topSlots, 7, board, true, 29);
+        printTable(table, 30, 84, 57, height - 29, height - 298, bottomSlots, 0, board, false, height-80);
+        printTable(table, 414, 468, 441, height - 29, height - 298, bottomSlots, 7, board, false, height-80);
+
+        if (game.getDice().getDiceSize() == 1) {
+            printDice(table, 0, game.getDice().getDiceNumbers().get(0));
+        }
+        else if (game.getDice().getDiceSize() == 2) {
+            printDice(table, 0, game.getDice().getDiceNumbers().get(0));
+            printDice(table, 80, game.getDice().getDiceNumbers().get(1));
+        }
+        else if (game.getDice().getDiceSize() > 2){
+            printDice(table, 0, game.getDice().getDiceNumbers().get(0));
+            printDice(table, 80, game.getDice().getDiceNumbers().get(1));
+        }
+
+        game.getDice().roll();
 
         table.setFont(new Font("font", Font.BOLD, 20));
         table.setColor(Color.black);
@@ -85,12 +117,111 @@ public class GUI extends JPanel {
         table.drawString("Black Wins!", 330, 25);
     }
 
-    public void printTable(Graphics table, int leftX, int rightX, int highX, int leftY, int highY, ArrayList<Integer> slot, int index) {
-        for (int triangleNumber = 0; triangleNumber < 6; triangleNumber++) {
+    public void printDice(Graphics table, int distance, int diceIndex) {
+        int width = 360;
+        int height = 265 + distance;
+        table.setColor(Color.WHITE);
+        table.fillRect(width, height, 46, 46);
+        table.setColor(Color.BLACK);
+        if (diceIndex == 1){
+            printPoint1(table, distance);
+        }
+        else if (diceIndex == 2){
+            printPoint2(table, distance);
+        }
+        else if (diceIndex == 3){
+            printPoint3(table, distance);
+        }
+        else if (diceIndex == 4){
+            printPoint4(table, distance);
+        }
+        else if (diceIndex == 5){
+            printPoint5(table, distance);
+        }
+        else if (diceIndex == 6){
+            printPoint6(table, distance);
+        }
+    }
+
+    public void printPoint1(Graphics table, int distance) {
+        table.fillOval(378, 284 + distance, 10, 10);
+    }
+
+    public void printPoint2(Graphics table, int distance) {
+        table.fillOval(390, 270 + distance, 10, 10);
+        table.fillOval(365, 295 + distance, 10, 10);
+    }
+
+    public void printPoint3(Graphics table, int distance) {
+        printPoint2(table, distance);
+        printPoint1(table, distance);
+    }
+
+    public void printPoint4(Graphics table, int distance) {
+        printPoint2(table, distance);
+        table.fillOval(365, 270+ distance, 10, 10);
+        table.fillOval(390, 295+ distance, 10, 10);
+    }
+
+    public void printPoint5(Graphics table, int distance) {
+        printPoint3(table, distance);
+    }
+
+    public void printPoint6(Graphics table, int distance) {
+        printPoint4(table, distance);
+    }
+
+    public void printTable(Graphics table, int leftX, int rightX, int highX, int leftY, int highY, ArrayList<Integer> slot, int index, Table board, boolean opponent, int startPosition) {
+        for (int triangleNumber = 0; triangleNumber < 7; triangleNumber++) {
             printTriangles(table, leftX, rightX, highX, leftY, highY, slot.get(index));
             leftX += 54;
             rightX += 54;
             highX += 54;
+            index++;
+        }
+
+        for (int w = 0; w < 7; w++) {
+            printPieces(table, slot.get(index-7), leftX-(54*7), board.getSlots().get(slot.get(index-7)).getColor() , board, opponent, startPosition);
+            leftX += 54;
+            index++;
+        }
+    }
+
+    public void printPieces(Graphics table, int slot, int posX, String color, Table board, boolean opponent, int startPosition) {
+        Color pieceColor;
+        int index = 0;
+        int startX = posX, startY = startPosition;
+
+        if (color == "BLACK") {
+            pieceColor = new Color(42, 41, 41);
+        } else {
+            pieceColor = Color.WHITE;
+        }
+
+        while (board.getSlots().get(slot).getStones() != 0) {
+            if (index == 5 || index == 10){
+                posX = startX + 4;
+                startX += 4;
+                if (opponent) {
+                    startPosition = startY + 4;
+                    startY += 4;
+                }
+                else{
+                    startPosition = startY -4;
+                    startY -= 4;
+                }
+            }
+            table.setColor(Color.BLACK);
+            table.fillOval(posX, startPosition, 54, 54);
+            table.setColor(pieceColor);
+            table.fillOval(posX+2, startPosition+2, 50, 50);
+            if (opponent) {
+                startPosition += 54;
+            }
+            else{
+                startPosition -= 54;
+            }
+            board.getSlots().get(slot).removeSlot();
             index++;
         }
     }
@@ -103,7 +234,7 @@ public class GUI extends JPanel {
             form.addPoint(rightX, leftY);
             form.addPoint(highX, highY);
             if(slot % 2==0)
-            table.setColor(new Color(101,53,53));
+                table.setColor(new Color(101,53,53));
             else
                 table.setColor(new Color(159,127,127));
             table.fillPolygon(form);
