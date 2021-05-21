@@ -5,6 +5,8 @@ import com.backgammon.game.Table;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.image.FilteredImageSource;
 import java.awt.image.ImageProducer;
 import java.awt.image.ReplicateScaleFilter;
@@ -23,6 +25,231 @@ public class GUI extends JPanel {
 
         createTopSlots();
         createBottomSlots();
+
+        mouseEvent();
+    }
+
+    public void mouseEvent() {
+        this.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent event) {
+                int mouseX = event.getX();
+                int mouseY = event.getY();
+                int leftX = 30, rightX = getWidth()/10;
+                int checkZone = getHeight()/2;
+
+                ArrayList<Integer> copySlots = new ArrayList<Integer>();
+
+                /* In functie de pozitia click-ului, atribuim sloturile de sus sau de jos pentru a face verificarile */
+                if (mouseY < checkZone)
+                    copySlots = topSlots;
+                else
+                    copySlots = bottomSlots;
+
+                checkClickPosition(mouseX, mouseY, rightX, leftX, copySlots, checkZone);
+            }
+        });
+    }
+
+    /*
+     * Verificam pozitia exacta a mouse-ului pe baza sloturilor copiate
+     * */
+    public void checkClickPosition(int mouseX, int mouseY, int rightX, int leftX, ArrayList<Integer> copySlots, int checkZone) {
+        int index = 0;
+        int distance = getWidth()/13-getWidth()/80-1;
+
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance+3;
+        rightX += distance+3;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance+getWidth()/12/2;
+        rightX += distance+getWidth()/12/2;
+        if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
+            System.out.println(copySlots.get(index));
+        }
+
+        index = 0;
+        leftX = 30;
+        rightX = getWidth()/10;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance+3;
+        rightX += distance+3;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance;
+        rightX += distance;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
+
+        index++;
+        leftX += distance+getWidth()/12/2;
+        rightX += distance+getWidth()/12/2;
+        if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
+            System.out.println(copySlots.get(index));
+        }
     }
 
     public void createTopSlots() {
@@ -164,11 +391,14 @@ public class GUI extends JPanel {
     }
 
     public void printPoint5(Graphics table, int distance) {
-        printPoint3(table, distance);
+        printPoint1(table, distance);
+        printPoint4(table, distance);
     }
 
     public void printPoint6(Graphics table, int distance) {
         printPoint4(table, distance);
+        table.fillOval(365, 283+ distance, 10, 10);
+        table.fillOval(390, 283+ distance, 10, 10);
     }
 
     public void printTable(Graphics table, int leftX, int rightX, int highX, int leftY, int highY, ArrayList<Integer> slot, int index, Table board, boolean opponent, int startPosition) {
