@@ -2,6 +2,7 @@ package com.backgammon.gui;
 
 import com.backgammon.game.Game;
 import com.backgammon.game.Table;
+import com.backgammon.game.common.Design;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,7 +13,7 @@ import java.awt.image.ImageProducer;
 import java.awt.image.ReplicateScaleFilter;
 import java.util.ArrayList;
 
-public class GUI extends JPanel {
+public class GUI extends JPanel implements Design {
 
     private ArrayList<Integer> topSlots;
     private ArrayList<Integer> bottomSlots;
