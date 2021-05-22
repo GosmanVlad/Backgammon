@@ -51,205 +51,276 @@ public class GUI extends JPanel {
         });
     }
 
+    public void refresh(){
+        this.repaint();
+    }
+
     /*
      * Verificam pozitia exacta a mouse-ului pe baza sloturilor copiate
      * */
     public void checkClickPosition(int mouseX, int mouseY, int rightX, int leftX, ArrayList<Integer> copySlots, int checkZone) {
         int index = 0;
         int distance = getWidth()/13-getWidth()/80-1;
+        int markerBottomPosition = getHeight()-getHeight()/22;
+        int markerTopPosition = getHeight()/21;
 
+        // Slot: 13
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 12
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 11
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 10
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 9
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 8
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 7
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+1, markerBottomPosition, "bottom");
         }
 
+        // Slot: 6
         index++;
         leftX += distance+3;
         rightX += distance+3;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 5
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 4
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 3
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 2
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 1
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
         }
 
+        // Slot: 0
         index++;
         leftX += distance+getWidth()/12/2;
         rightX += distance+getWidth()/12/2;
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+1, markerBottomPosition, "bottom");
         }
-
+        /* Zona oponentului */
+        //slot 14
         index = 0;
         leftX = 30;
         rightX = getWidth()/10;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX, markerTopPosition, "top");
         }
 
+        //slot 15
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX, markerTopPosition, "top");
         }
 
+        //slot 16
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX, markerTopPosition, "top");
         }
 
+        //slot 17
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX, markerTopPosition, "top");
         }
 
+        //slot 18
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX, markerTopPosition, "top");
         }
 
+        //slot 19
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX, markerTopPosition, "top");
         }
 
+        //slot 20
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX, markerTopPosition, "top");
         }
 
+        //slot 21
         index++;
         leftX += distance+3;
         rightX += distance+3;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
         }
 
+        //slot 22
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
         }
 
+        //slot 23
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
         }
 
+        //slot 24
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
         }
 
+        //slot 25
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
         }
 
+        //slot 26
         index++;
         leftX += distance;
         rightX += distance;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
         }
 
+        //slot 27
         index++;
         leftX += distance+getWidth()/12/2;
         rightX += distance+getWidth()/12/2;
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
+            drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
         }
+    }
+
+    public void drawMarker(Graphics graphics, int leftX, int height, String section) {
+        graphics.setColor(new Color(255, 255, 204));
+
+        if(section == "bottom")
+            graphics.fillOval(leftX+5, height+5, 17, 17);
+        else
+            graphics.fillOval(leftX+5, height-20, 17, 17);
     }
 
     public void createTopSlots() {
