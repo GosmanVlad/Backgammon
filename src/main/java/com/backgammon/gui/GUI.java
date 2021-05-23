@@ -21,6 +21,7 @@ public class GUI extends JPanel implements Design {
 
     public GUI(Game game) {
         this.game = game;
+        game.addDesign(this);
         topSlots = new ArrayList<Integer>();
         bottomSlots = new ArrayList<Integer>();
 
@@ -69,6 +70,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 12
@@ -78,6 +80,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 11
@@ -87,6 +90,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 10
@@ -96,6 +100,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 9
@@ -105,6 +110,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 8
@@ -114,6 +120,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX-2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 7
@@ -123,6 +130,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+1, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 6
@@ -132,6 +140,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 5
@@ -141,6 +150,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 4
@@ -150,6 +160,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 3
@@ -159,6 +170,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 2
@@ -168,6 +180,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 1
@@ -177,6 +190,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
 
         // Slot: 0
@@ -186,7 +200,9 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY > checkZone){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+1, markerBottomPosition, "bottom");
+            game.getDesireMove(copySlots.get(index));
         }
+
         /* Zona oponentului */
         //slot 14
         index = 0;
@@ -195,6 +211,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 15
@@ -204,6 +221,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 16
@@ -213,6 +231,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 17
@@ -222,6 +241,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 18
@@ -231,6 +251,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 19
@@ -240,6 +261,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 20
@@ -249,6 +271,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 21
@@ -258,6 +281,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 22
@@ -267,6 +291,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 23
@@ -276,6 +301,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 24
@@ -285,6 +311,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 25
@@ -294,6 +321,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 26
@@ -303,6 +331,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
 
         //slot 27
@@ -312,6 +341,7 @@ public class GUI extends JPanel implements Design {
         if (mouseX > leftX && mouseX < rightX && mouseY < checkZone ){
             System.out.println(copySlots.get(index));
             drawMarker(getGraphics(), leftX+2, markerTopPosition, "top");
+            game.getDesireMove(copySlots.get(index));
         }
     }
 
@@ -408,12 +438,15 @@ public class GUI extends JPanel implements Design {
             printDice(table, 80, game.getDice().getDiceNumbers().get(1));
         }
 
-        game.getDice().roll();
-
         table.setFont(new Font("font", Font.BOLD, 20));
         table.setColor(Color.black);
 
-        table.drawString("Black Wins!", 330, 25);
+        if(!game.isMoveDone()) {
+            if(game.getCurrentPlayer() == "BLACK")
+                table.drawString("Black's turn'", 330, 25);
+            else if(game.getCurrentPlayer() == "WHITE")
+                table.drawString("white's turn", 330, 25);
+        }
     }
 
     public void printDice(Graphics table, int distance, int diceIndex) {
