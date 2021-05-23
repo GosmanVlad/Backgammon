@@ -53,8 +53,6 @@ public class Dice {
 //                return true;
 //        }
 //        return false;
-        System.out.println("Dice1: " + diceNumbers.get(0));
-        System.out.println("Dice2: " + diceNumbers.get(1));
         System.out.println(diceNumbers.size()+ " size");
         return diceNumbers.contains(number);
     }

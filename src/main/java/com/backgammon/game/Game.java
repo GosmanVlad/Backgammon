@@ -85,7 +85,10 @@ public class Game {
         }
         table.getSlots().get(from).removeSlot();
         if (table.getSlots().get(from).getStones() == 0 && from != 7 && from != 25) {
-//                table.getSlots().get(from) = new Slot();
+            table.getSlots().set( table.getSlots().indexOf(from) , new Slot());
+            dice.deleteDiceNumber(Math.abs(from - to));
+        }
+        else {
             dice.deleteDiceNumber(Math.abs(from - to));
         }
     }
