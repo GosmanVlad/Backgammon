@@ -87,7 +87,7 @@ public class Game {
         /* Logica pentru zaruri - stergere din grafica daca este cazul + eliberare slot daca este cazul */
         table.getSlots().get(from).removeSlot();
         if (table.getSlots().get(from).getStones() == 0 && from != 7 && from != 25) {
-            table.getSlots().set( table.getSlots().indexOf(from) , new Slot());
+            table.getSlots().set(from, new Slot());
             dice.deleteDiceNumber(Math.abs(from - to));
         }
         else {
@@ -189,18 +189,18 @@ public class Game {
             }
 
             if(currentPlayer == "BLACK") {
-                if(to <= from) {
+                if (to <= from) {
                     System.out.println("TEST12");
                     return false;
                 }
 
-                if ((to-1)-from > dice.checkNumberOnDice((to-1)-from)) {
+                if ((to - 1) - from > dice.checkNumberOnDice((to - 1) - from)) {
                     System.out.println("TEST13");
                     return false;
                 }
             }
-            else {
-                if(!dice.checkDice(from-to)) {
+            else if(currentPlayer == "WHITE") {
+                if (!dice.checkDice(from - to)) {
                     System.out.println("TEST14");
                     return false;
                 }
