@@ -73,40 +73,34 @@ public class Game {
 
     public void movePiece(int from, int to) {
         if (table.pieceInHome(currentPlayer)) {
-            if (currentPlayer == "BLACK")
-                dice.deleteDiceNumber(dice.checkNumberOnDice(Math.abs(from - to)));
-            else if (currentPlayer == "WHITE")
-                dice.deleteDiceNumber(dice.checkNumberOnDice(Math.abs(from - to)));
+            dice.deleteDiceNumber(dice.checkNumberOnDice(Math.abs(from - to)));
 
             table.getSlots().get(to).addStone();
             table.getSlots().get(to).setColor(currentPlayer);
             table.getSlots().get(from).removeSlot();
-            return;
-        }
-
-        /* Logica pentru zaruri - stergere din grafica daca este cazul + eliberare slot daca este cazul */
-        table.getSlots().get(from).removeSlot();
-        if (table.getSlots().get(from).getStones() == 0 && from != 7 && from != 25) {
-            table.getSlots().set(from, new Slot());
-            dice.deleteDiceNumber(Math.abs(from - to));
         }
         else {
-            dice.deleteDiceNumber(Math.abs(from - to));
-        }
+            /* Logica pentru zaruri - stergere din grafica daca este cazul + eliberare slot daca este cazul */
+            table.getSlots().get(from).removeSlot();
+            if (table.getSlots().get(from).getStones() == 0 && from != 7 && from != 25) {
+                table.getSlots().set(from, new Slot());
+                dice.deleteDiceNumber(Math.abs(from - to));
+            } else {
+                dice.deleteDiceNumber(Math.abs(from - to));
+            }
 
-        /* Mutam piesa selectata in slotul dorit + logica pe sloturi pentru "mancarea" unei piese */
-        if(table.getSlots().get(to).getStones() == 1 && table.getSlots().get(to).getColor() != currentPlayer) {
-            table.getSlots().get(to).setColor(currentPlayer);
-            table.moveOnSide(currentPlayer);
-        }
-        else {
-            table.getSlots().get(to).addStone();
-            table.getSlots().get(to).setColor(currentPlayer);
+            /* Mutam piesa selectata in slotul dorit + logica pe sloturi pentru "mancarea" unei piese */
+            if (table.getSlots().get(to).getStones() == 1 && table.getSlots().get(to).getColor() != currentPlayer) {
+                table.getSlots().get(to).setColor(currentPlayer);
+                table.moveOnSide(currentPlayer);
+            } else {
+                table.getSlots().get(to).addStone();
+                table.getSlots().get(to).setColor(currentPlayer);
+            }
         }
     }
 
     public boolean checkPossibleMove(int from, int to) {
-        System.out.println("TestFROM: " + from + "SlotTo: " + to);
         /* Daca slotul selectat = slot tinta, nu se va face mutarea */
         if(from == to) {
             return false;
@@ -114,13 +108,11 @@ public class Game {
 
         /* Daca slotul tinta este o mutare valida */
         if(table.getSlots().get(to).getColor() != currentPlayer && table.getSlots().get(to).getColor() != "NONE" && table.getSlots().get(to).getStones() != 1) {
-            System.out.println("TEST1 - " + from + " " + to + " " + table.getSlots().get(to).getColor() + " " + currentPlayer + " " + table.getSlots().get(to).getStones());
             return false;
         }
 
         /* Daca slotul selectat este culoarea jucatorului */
         if(table.getSlots().get(from).getColor() != currentPlayer) {
-            System.out.println("TEST2");
             return false;
         }
 
@@ -130,26 +122,22 @@ public class Game {
 
                 /* Daca numarul de sloturi peste care sare piesa este diferit de un numar dat de zar */
                 if(!dice.containsDiceNumber(Math.abs(from-to))) {
-                    System.out.println("TEST3");
                     return false;
                 }
 
                 /* Daca mutarea se face pe unul dintre sloturile de pe tabla */
-                if(from > 26 || from < 1 || to > 26 || to < 1) {
-                    System.out.println("TEST4");
+                if(from > 26 || from < 0 || to > 27 || to < 0 || to == 7 || to == 20) {
                     return false;
                 }
 
                 /* Daca mutarea este in directia corecta */
                 if(currentPlayer == "BLACK") {
                     if(to <= from) {
-                        System.out.println("TEST5");
                         return false;
                     }
                 }
                 else if(currentPlayer == "WHITE") {
                     if(to >= from) {
-                        System.out.println("TEST6");
                         return false;
                     }
                 }
@@ -158,24 +146,20 @@ public class Game {
                 if(currentPlayer == "BLACK") {
                     /* Daca jucatorul incearca sa mute o alta piesa in afara de cea de pe margine */
                     if(from != 7) {
-                        System.out.println("TEST7");
                         return false;
                     }
 
                     /* Daca destinatia piesei apartine unui slot de pe tabla / o mutare valida */
                     if(to > 6 || to < 1) {
-                        System.out.println("TEST8");
                         return false;
                     }
                 }
                 else if(currentPlayer == "WHITE") {
                     if(from != 20) {
-                        System.out.println("TEST9");
                         return false;
                     }
 
                     if(to < 21 || to > 26) {
-                        System.out.println("TEST10");
                         return false;
                     }
                 }
@@ -184,24 +168,20 @@ public class Game {
         else {
             /* Daca piesa se afla pe tabla - nu este deja scoasa */
             if(from > 26) {
-                System.out.println("TEST11");
                 return false;
             }
 
             if(currentPlayer == "BLACK") {
                 if (to <= from) {
-                    System.out.println("TEST12");
                     return false;
                 }
 
                 if ((to - 1) - from > dice.checkNumberOnDice((to - 1) - from)) {
-                    System.out.println("TEST13");
                     return false;
                 }
             }
             else if(currentPlayer == "WHITE") {
                 if (!dice.checkDice(from - to)) {
-                    System.out.println("TEST14");
                     return false;
                 }
             }
