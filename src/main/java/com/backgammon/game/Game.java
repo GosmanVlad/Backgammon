@@ -51,6 +51,7 @@ public class Game {
         if(!moveDone) {
             if(moveOption()) {
                 if(checkPossibleMove(slotFrom, slotTo)) {
+                    System.out.println("TEST FROM" + slotFrom + "TEST TO" + slotTo);
                     movePiece(slotFrom, slotTo);
                     refreshDesign();
 
@@ -86,7 +87,12 @@ public class Game {
                 table.getSlots().set(from, new Slot());
                 dice.deleteDiceNumber(Math.abs(from - to));
             } else {
-                dice.deleteDiceNumber(Math.abs(from - to));
+                if(from == 7 && currentPlayer == "BLACK")
+                    dice.deleteDiceNumber(to);
+                else if(from == 20 && currentPlayer == "WHITE")
+                    dice.deleteDiceNumber(Math.abs(from+7-to));
+                else
+                    dice.deleteDiceNumber(Math.abs(from-to));
             }
 
             /* Mutam piesa selectata in slotul dorit + logica pe sloturi pentru "mancarea" unei piese */
@@ -156,10 +162,12 @@ public class Game {
                 }
                 else if(currentPlayer == "WHITE") {
                     if(from != 20) {
+                        System.out.println("TEST2 - " + from);
                         return false;
                     }
 
                     if(to < 21 || to > 26) {
+                        System.out.println("TEST3 - " + to + " ");
                         return false;
                     }
                 }
@@ -191,17 +199,26 @@ public class Game {
 
     public boolean moveOption() {
         boolean valid = false;
+        int targetSlot;
         if(currentPlayer == "BLACK") {
             if(!table.pieceInHome(currentPlayer)) {
                 for (int pieceIndex = 0; pieceIndex < 26; pieceIndex++) {
-                    int targetSlot = pieceIndex + dice.getDiceNumbers().get(0);
+                    if(pieceIndex == 7)
+                        targetSlot = dice.getDiceNumbers().get(0);
+                    else
+                        targetSlot = pieceIndex + dice.getDiceNumbers().get(0);
+
                     if (targetSlot < 29) {
                         if (checkPossibleMove(pieceIndex, targetSlot)) {
                             return true;
                         }
                     }
                     if (dice.getDiceSize() > 1) {
-                        targetSlot = pieceIndex + dice.getDiceNumbers().get(1);
+                        if(pieceIndex == 7)
+                            targetSlot = dice.getDiceNumbers().get(1);
+                        else
+                            targetSlot = pieceIndex + dice.getDiceNumbers().get(1);
+
                         if (targetSlot < 29) {
                             if (dice.getDiceSize() > 1) {
                                 if (checkPossibleMove(pieceIndex, targetSlot)) {
@@ -219,17 +236,24 @@ public class Game {
         if(currentPlayer == "WHITE") {
             if(!table.pieceInHome(currentPlayer)) {
                 for (int pieceIndex = 0; pieceIndex < 26; pieceIndex++) {
-                    int temp = pieceIndex - dice.getDiceNumbers().get(0);
-                    if (temp > 0) {
-                        if (checkPossibleMove(pieceIndex, temp)) {
+                    if(pieceIndex == 20)
+                        targetSlot = pieceIndex+7 - dice.getDiceNumbers().get(0);
+                    else
+                        targetSlot = pieceIndex - dice.getDiceNumbers().get(0);
+
+                    if (targetSlot > 0) {
+                        if (checkPossibleMove(pieceIndex, targetSlot)) {
                             return true;
                         }
                     }
                     if (dice.getDiceSize() > 1) {
-                        temp = pieceIndex - dice.getDiceNumbers().get(1);
-                        if (temp > 0) {
+                        if(pieceIndex == 20)
+                            targetSlot = pieceIndex+7 - dice.getDiceNumbers().get(1);
+                        else
+                            targetSlot = pieceIndex - dice.getDiceNumbers().get(1);
+                        if (targetSlot > 0) {
                             if (dice.getDiceSize()  > 1) {
-                                if (checkPossibleMove(pieceIndex, temp)) {
+                                if (checkPossibleMove(pieceIndex, targetSlot)) {
                                     return true;
                                 }
                             }

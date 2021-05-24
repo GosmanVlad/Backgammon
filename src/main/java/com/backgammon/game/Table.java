@@ -83,13 +83,13 @@ public class Table {
 
     public boolean onSide(String player) {
         if(player == "BLACK") {
-            if(slots.get(20).getStones() > 0)
+            if(slots.get(7).getStones() > 0)
                 return true;
             else
                 return false;
         }
         else if(player == "WHITE") {
-            if(slots.get(7).getStones() > 0)
+            if(slots.get(20).getStones() > 0)
                 return true;
             else
                 return false;

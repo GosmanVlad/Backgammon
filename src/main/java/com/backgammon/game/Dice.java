@@ -59,7 +59,8 @@ public class Dice {
 
     public void deleteDiceNumber(int dice) {
         System.out.println("DICE REMOVE " + dice);
-        diceNumbers.remove(diceNumbers.indexOf(dice));
+        if(containsDiceNumber(dice))
+            diceNumbers.remove(diceNumbers.indexOf(dice));
     }
 
     public int checkNumberOnDice(int number) {
