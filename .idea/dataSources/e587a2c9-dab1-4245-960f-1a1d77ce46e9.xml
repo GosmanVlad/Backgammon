@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" dbms="ORACLE" family-id="ORACLE" format-version="4.21">
+    <root id="1">
+      <ServerVersion>11.2.0.2.0</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="ANONYMOUS">
+      <ObjectId>35</ObjectId>
+    </schema>
+    <schema id="3" parent="1" name="APEX_040000">
+      <ObjectId>47</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>45</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="APPQOSSYS">
+      <ObjectId>30</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="CTXSYS">
+      <ObjectId>32</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="DBSNMP">
+      <ObjectId>29</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="DIP">
+      <ObjectId>14</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="FLOWS_FILES">
+      <ObjectId>44</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="HR">
+      <ObjectId>43</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="MDSYS">
+      <ObjectId>42</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="ORACLE_OCM">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="OUTLN">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+      <CreatedTimestamp>2014-05-29.16:10:42</CreatedTimestamp>
+      <ModifiedTimestamp>2014-05-29.16:31:03</ModifiedTimestamp>
+      <IntrospectionVersion>200820</IntrospectionVersion>
+    </schema>
+    <schema id="15" parent="1" name="STUDENT">
+      <ObjectId>48</ObjectId>
+      <CreatedTimestamp>2021-02-16.17:11:08</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-24.17:47:51</ModifiedTimestamp>
+      <IntrospectionVersion>200820</IntrospectionVersion>
+      <IntrospectionTimestamp>2021-05-24.17:52:18</IntrospectionTimestamp>
+      <Current>1</Current>
+    </schema>
+    <schema id="16" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="SYSTEM">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="XDB">
+      <ObjectId>34</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <user id="20" parent="1" name="ANONYMOUS">
+      <ObjectId>35</ObjectId>
+    </user>
+    <user id="21" parent="1" name="APEX_040000">
+      <ObjectId>47</ObjectId>
+    </user>
+    <user id="22" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>45</ObjectId>
+    </user>
+    <user id="23" parent="1" name="APPQOSSYS">
+      <ObjectId>30</ObjectId>
+    </user>
+    <user id="24" parent="1" name="CTXSYS">
+      <ObjectId>32</ObjectId>
+    </user>
+    <user id="25" parent="1" name="DBSNMP">
+      <ObjectId>29</ObjectId>
+    </user>
+    <user id="26" parent="1" name="DIP">
+      <ObjectId>14</ObjectId>
+    </user>
+    <user id="27" parent="1" name="FLOWS_FILES">
+      <ObjectId>44</ObjectId>
+    </user>
+    <user id="28" parent="1" name="HR">
+      <ObjectId>43</ObjectId>
+    </user>
+    <user id="29" parent="1" name="MDSYS">
+      <ObjectId>42</ObjectId>
+    </user>
+    <user id="30" parent="1" name="ORACLE_OCM">
+      <ObjectId>21</ObjectId>
+    </user>
+    <user id="31" parent="1" name="OUTLN">
+      <ObjectId>9</ObjectId>
+    </user>
+    <user id="32" parent="1" name="STUDENT">
+      <ObjectId>48</ObjectId>
+      <DefaultTablespace>USERS</DefaultTablespace>
+      <TemporaryTablespace>TEMP</TemporaryTablespace>
+    </user>
+    <user id="33" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </user>
+    <user id="34" parent="1" name="SYSTEM">
+      <ObjectId>5</ObjectId>
+    </user>
+    <user id="35" parent="1" name="XDB">
+      <ObjectId>34</ObjectId>
+    </user>
+    <user id="36" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </user>
+    <table id="37" parent="15" name="ACTORS">
+      <ObjectId>21868</ObjectId>
+      <CreatedTimestamp>2021-04-19.14:00:44</CreatedTimestamp>
+      <ModifiedTimestamp>2021-04-19.14:47:27</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="38" parent="15" name="CURSURI">
+      <ObjectId>20062</ObjectId>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="39" parent="15" name="DIDACTIC">
+      <ObjectId>20068</ObjectId>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="40" parent="15" name="DIRECTORS">
+      <ObjectId>21869</ObjectId>
+      <CreatedTimestamp>2021-04-19.14:00:44</CreatedTimestamp>
+      <ModifiedTimestamp>2021-04-19.14:00:44</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="41" parent="15" name="GAMES">
+      <ObjectId>22776</ObjectId>
+      <CreatedTimestamp>2021-05-24.17:47:51</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-24.17:47:51</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="42" parent="15" name="GENRES">
+      <ObjectId>21866</ObjectId>
+      <CreatedTimestamp>2021-04-19.14:00:44</CreatedTimestamp>
+      <ModifiedTimestamp>2021-04-19.14:00:44</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="43" parent="15" name="JUNCTION">
+      <ObjectId>21867</ObjectId>
+      <CreatedTimestamp>2021-04-19.14:00:44</CreatedTimestamp>
+      <ModifiedTimestamp>2021-04-19.14:00:44</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="44" parent="15" name="MOVIES">
+      <ObjectId>21865</ObjectId>
+      <CreatedTimestamp>2021-04-19.14:00:44</CreatedTimestamp>
+      <ModifiedTimestamp>2021-04-19.14:00:44</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="45" parent="15" name="NOTE">
+      <ObjectId>20064</ObjectId>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-17.11:42:14</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="46" parent="15" name="PLAYERS">
+      <ObjectId>22771</ObjectId>
+      <CreatedTimestamp>2021-05-24.01:30:19</CreatedTimestamp>
+      <ModifiedTimestamp>2021-05-24.01:47:12</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="47" parent="15" name="PRIETENI">
+      <ObjectId>20070</ObjectId>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="48" parent="15" name="PROFESORI">
+      <ObjectId>20066</ObjectId>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="49" parent="15" name="STUDENTI">
+      <ObjectId>20060</ObjectId>
+      <CreatedTimestamp>2021-02-16.17:11:08</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:08</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <package id="50" parent="15" name="CALCULATOR">
+      <ObjectId>20572</ObjectId>
+      <SourceTextLength>95</SourceTextLength>
+      <CreatedTimestamp>2021-03-08.20:40:24</CreatedTimestamp>
+      <ModifiedTimestamp>2021-03-08.20:45:19</ModifiedTimestamp>
+    </package>
+    <package id="51" parent="15" name="EUCLID">
+      <ObjectId>20662</ObjectId>
+      <SourceTextLength>73</SourceTextLength>
+      <CreatedTimestamp>2021-03-10.10:48:11</CreatedTimestamp>
+      <ModifiedTimestamp>2021-03-10.11:00:59</ModifiedTimestamp>
+    </package>
+    <package id="52" parent="15" name="STUDENTI_BURSA">
+      <ObjectId>20568</ObjectId>
+      <SourceTextLength>96</SourceTextLength>
+      <DependsOnIds>20060</DependsOnIds>
+      <CreatedTimestamp>2021-03-07.23:23:38</CreatedTimestamp>
+      <ModifiedTimestamp>2021-03-08.00:40:16</ModifiedTimestamp>
+    </package>
+    <object-type id="53" parent="15" name="DREPTUNGHI">
+      <ObjectId>21342</ObjectId>
+      <SourceTextLength>107</SourceTextLength>
+      <CreatedTimestamp>2021-03-31.12:04:48</CreatedTimestamp>
+      <ModifiedTimestamp>2021-03-31.12:04:48</ModifiedTimestamp>
+      <Final>1</Final>
+      <Instantiable>1</Instantiable>
+    </object-type>
+    <column id="54" parent="37" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="37" name="IDMOVIE">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="37" name="NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(40 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="38" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="38" name="TITLU_CURS">
+      <Position>2</Position>
+      <DataType>VARCHAR2(52 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="38" name="AN">
+      <Position>3</Position>
+      <DataType>NUMBER(1 digit)|0s</DataType>
+    </column>
+    <column id="60" parent="38" name="SEMESTRU">
+      <Position>4</Position>
+      <DataType>NUMBER(1 digit)|0s</DataType>
+    </column>
+    <column id="61" parent="38" name="CREDITE">
+      <Position>5</Position>
+      <DataType>NUMBER(2 digit)|0s</DataType>
+    </column>
+    <column id="62" parent="38" name="CREATED_AT">
+      <Position>6</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="63" parent="38" name="UPDATED_AT">
+      <Position>7</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <index id="64" parent="38" name="SYS_C007004">
+      <ObjectId>20063</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="38" name="SYS_C007004">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C007004</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="66" parent="39" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="39" name="ID_PROFESOR">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="39" name="ID_CURS">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="39" name="CREATED_AT">
+      <Position>4</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="70" parent="39" name="UPDATED_AT">
+      <Position>5</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <index id="71" parent="39" name="SYS_C007018">
+      <ObjectId>20069</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="39" name="SYS_C007018">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C007018</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="73" parent="39" name="FK_DIDACTIC_ID_PROFESOR">
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID_PROFESOR</ColNames>
+      <RefSchemaName>STUDENT</RefSchemaName>
+      <RefTableName>PROFESORI</RefTableName>
+      <RefKeyName>SYS_C007014</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="74" parent="39" name="FK_DIDACTIC_ID_CURS">
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID_CURS</ColNames>
+      <RefSchemaName>STUDENT</RefSchemaName>
+      <RefTableName>CURSURI</RefTableName>
+      <RefKeyName>SYS_C007004</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="75" parent="40" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="40" name="IDMOVIE">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="40" name="NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(40 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="41" name="NAME1">
+      <Position>1</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="41" name="NAME2">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="41" name="WINNER">
+      <Position>3</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+    </column>
+    <column id="81" parent="42" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="42" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="43" name="IDMOVIES">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="84" parent="43" name="IDGENRES">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="44" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="86" parent="44" name="TITLE">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="44" name="RELEASEDATE">
+      <Position>3</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="88" parent="44" name="DURATION">
+      <Position>4</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="89" parent="44" name="SCORE">
+      <Position>5</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="90" parent="45" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="45" name="ID_STUDENT">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="45" name="ID_CURS">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="45" name="VALOARE">
+      <Position>4</Position>
+      <DataType>NUMBER(2 digit)|0s</DataType>
+    </column>
+    <column id="94" parent="45" name="DATA_NOTARE">
+      <Position>5</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="95" parent="45" name="CREATED_AT">
+      <Position>6</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="96" parent="45" name="UPDATED_AT">
+      <Position>7</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <index id="97" parent="45" name="SYS_C007008">
+      <ObjectId>20065</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="98" parent="45" name="SYS_C007008">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C007008</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="99" parent="45" name="FK_NOTE_ID_STUDENT">
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID_STUDENT</ColNames>
+      <RefSchemaName>STUDENT</RefSchemaName>
+      <RefTableName>STUDENTI</RefTableName>
+      <RefKeyName>SYS_C007001</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="100" parent="45" name="FK_NOTE_ID_CURS">
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID_CURS</ColNames>
+      <RefSchemaName>STUDENT</RefSchemaName>
+      <RefTableName>CURSURI</RefTableName>
+      <RefKeyName>SYS_C007004</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="101" parent="46" name="NAME">
+      <Position>1</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="46" name="POINTS">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="103" parent="47" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="104" parent="47" name="ID_STUDENT1">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="105" parent="47" name="ID_STUDENT2">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="106" parent="47" name="CREATED_AT">
+      <Position>4</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="107" parent="47" name="UPDATED_AT">
+      <Position>5</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <index id="108" parent="47" name="SYS_C007023">
+      <ObjectId>20071</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="109" parent="47" name="NO_DUPLICATES">
+      <ObjectId>20072</ObjectId>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID_STUDENT1
+ID_STUDENT2</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="110" parent="47" name="SYS_C007023">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C007023</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="111" parent="47" name="NO_DUPLICATES">
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID_STUDENT1
+ID_STUDENT2</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>NO_DUPLICATES</UnderlyingIndexName>
+    </key>
+    <foreign-key id="112" parent="47" name="FK_PRIETENI_ID_STUDENT1">
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID_STUDENT1</ColNames>
+      <RefSchemaName>STUDENT</RefSchemaName>
+      <RefTableName>STUDENTI</RefTableName>
+      <RefKeyName>SYS_C007001</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="113" parent="47" name="FK_PRIETENI_ID_STUDENT2">
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID_STUDENT2</ColNames>
+      <RefSchemaName>STUDENT</RefSchemaName>
+      <RefTableName>STUDENTI</RefTableName>
+      <RefKeyName>SYS_C007001</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="114" parent="48" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="115" parent="48" name="NUME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(15 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="116" parent="48" name="PRENUME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="117" parent="48" name="GRAD_DIDACTIC">
+      <Position>4</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+    </column>
+    <column id="118" parent="48" name="CREATED_AT">
+      <Position>5</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="119" parent="48" name="UPDATED_AT">
+      <Position>6</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <index id="120" parent="48" name="SYS_C007014">
+      <ObjectId>20067</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="121" parent="48" name="SYS_C007014">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C007014</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="122" parent="49" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="123" parent="49" name="NR_MATRICOL">
+      <Position>2</Position>
+      <DataType>VARCHAR2(6 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="124" parent="49" name="NUME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(15 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="125" parent="49" name="PRENUME">
+      <Position>4</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="126" parent="49" name="AN">
+      <Position>5</Position>
+      <DataType>NUMBER(1 digit)|0s</DataType>
+    </column>
+    <column id="127" parent="49" name="GRUPA">
+      <Position>6</Position>
+      <DataType>CHAR(2 byte)|0s</DataType>
+    </column>
+    <column id="128" parent="49" name="BURSA">
+      <Position>7</Position>
+      <DataType>NUMBER(6,2 digit)|0s</DataType>
+    </column>
+    <column id="129" parent="49" name="DATA_NASTERE">
+      <Position>8</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="130" parent="49" name="EMAIL">
+      <Position>9</Position>
+      <DataType>VARCHAR2(40 byte)|0s</DataType>
+    </column>
+    <column id="131" parent="49" name="CREATED_AT">
+      <Position>10</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="132" parent="49" name="UPDATED_AT">
+      <Position>11</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <index id="133" parent="49" name="SYS_C007001">
+      <ObjectId>20061</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-16.17:11:09</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="134" parent="49" name="SYS_C007001">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2021-02-16.17:11:09</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C007001</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <body id="135" parent="50" name="CALCULATOR">
+      <ObjectId>20573</ObjectId>
+      <SourceTextLength>185</SourceTextLength>
+      <CreatedTimestamp>2021-03-08.20:47:18</CreatedTimestamp>
+      <ModifiedTimestamp>2021-03-09.10:43:34</ModifiedTimestamp>
+    </body>
+    <routine id="136" parent="50" name="CALCUL">
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <body id="137" parent="51" name="EUCLID">
+      <ObjectId>20663</ObjectId>
+      <SourceTextLength>333</SourceTextLength>
+      <Errors>8:8:PLS-00363: expression &apos;N1&apos; cannot be used as an assignment target
+8:8:PL/SQL: Statement ignored
+10:8:PLS-00363: expression &apos;N2&apos; cannot be used as an assignment target
+10:8:PL/SQL: Statement ignored
+</Errors>
+      <Invalid>1</Invalid>
+      <DependsOnIds>4973</DependsOnIds>
+      <CreatedTimestamp>2021-03-10.10:51:19</CreatedTimestamp>
+      <ModifiedTimestamp>2021-03-10.11:31:36</ModifiedTimestamp>
+    </body>
+    <routine id="138" parent="51" name="CMMDC">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <body id="139" parent="52" name="STUDENTI_BURSA">
+      <ObjectId>20571</ObjectId>
+      <SourceTextLength>447</SourceTextLength>
+      <DependsOnIds>4973,20060</DependsOnIds>
+      <CreatedTimestamp>2021-03-08.00:02:36</CreatedTimestamp>
+      <ModifiedTimestamp>2021-03-10.11:48:39</ModifiedTimestamp>
+    </body>
+    <routine id="140" parent="52" name="FIND_BURSA">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <body id="141" parent="53" name="DREPTUNGHI">
+      <ObjectId>21343</ObjectId>
+      <SourceTextLength>124</SourceTextLength>
+      <CreatedTimestamp>2021-03-31.12:04:48</CreatedTimestamp>
+      <ModifiedTimestamp>2021-03-31.12:05:00</ModifiedTimestamp>
+    </body>
+    <object-attribute id="142" parent="53" name="LUNGIME">
+      <Position>1</Position>
+      <DataType>NUMBER|0s</DataType>
+    </object-attribute>
+    <object-attribute id="143" parent="53" name="LATIME">
+      <Position>2</Position>
+      <DataType>NUMBER|0s</DataType>
+    </object-attribute>
+    <routine id="144" parent="53" name="AREA">
+      <RoutineKind>function</RoutineKind>
+      <MemberKind>map</MemberKind>
+      <Instantiable>1</Instantiable>
+    </routine>
+    <argument id="145" parent="136">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>NUMBER|0s</DataType>
+    </argument>
+    <argument id="146" parent="136" name="N1">
+      <Position>1</Position>
+      <DataType>NUMBER|0s</DataType>
+    </argument>
+    <argument id="147" parent="136" name="N2">
+      <Position>2</Position>
+      <DataType>NUMBER|0s</DataType>
+    </argument>
+    <argument id="148" parent="138" name="N1">
+      <Position>1</Position>
+      <DataType>NUMBER|0s</DataType>
+    </argument>
+    <argument id="149" parent="138" name="N2">
+      <Position>2</Position>
+      <DataType>NUMBER|0s</DataType>
+    </argument>
+    <argument id="150" parent="140" name="S_ID">
+      <Position>1</Position>
+      <DataType>STUDENTI.ID() %TYPE|0cs</DataType>
+    </argument>
+    <argument id="151" parent="144">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>NUMBER|0s</DataType>
+    </argument>
+    <argument id="152" parent="144" name="SELF">
+      <Position>1</Position>
+      <ArgumentDirection>S</ArgumentDirection>
+      <DataType>DREPTUNGHI|0cs</DataType>
+    </argument>
+  </database-model>
+</dataSource>

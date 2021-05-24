@@ -20,6 +20,8 @@ public class Main {
         String secondPlayerName = keyboard.nextLine();
         Player player1 = new Player(secondPlayerName, 3);
         newPlayer.addPlayer(player1);
+
+
     }
 }
 

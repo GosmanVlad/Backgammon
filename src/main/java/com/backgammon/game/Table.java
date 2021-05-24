@@ -6,6 +6,7 @@ import java.util.List;
 public class Table {
 
     private List<Slot> slots;
+    String winner;
 
     public Table() {
         slots = new ArrayList<Slot>();
@@ -98,11 +99,22 @@ public class Table {
     }
 
     public boolean isGameOver() {
+
         if(slots.get(27).getStones() == 15) //Black wins
+        {
+            winner = "BLACK";
             return true;
+        }
         if(slots.get(0).getStones() == 15) //White wins
+        {
+            winner = "WHITE";
             return true;
+        }
         return false;
+    }
+
+    public String getWinner(){
+        return winner;
     }
 
     public void moveOnSide(String player) {
