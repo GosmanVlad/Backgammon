@@ -104,4 +104,15 @@ public class Table {
             return true;
         return false;
     }
+
+    public void moveOnSide(String player) {
+        if(player == "BLACK") {
+            slots.get(20).addStone();
+            slots.get(20).setColor("WHITE");
+        }
+        else {
+            slots.get(7).addStone();
+            slots.get(7).setColor("BLACK");
+        }
+    }
 }

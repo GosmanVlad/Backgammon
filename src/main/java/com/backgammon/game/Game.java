@@ -83,6 +83,8 @@ public class Game {
             table.getSlots().get(from).removeSlot();
             return;
         }
+
+        /* Logica pentru zaruri - stergere din grafica daca este cazul + eliberare slot daca este cazul */
         table.getSlots().get(from).removeSlot();
         if (table.getSlots().get(from).getStones() == 0 && from != 7 && from != 25) {
             table.getSlots().set( table.getSlots().indexOf(from) , new Slot());
@@ -90,6 +92,16 @@ public class Game {
         }
         else {
             dice.deleteDiceNumber(Math.abs(from - to));
+        }
+
+        /* Mutam piesa selectata in slotul dorit + logica pe sloturi pentru "mancarea" unei piese */
+        if(table.getSlots().get(to).getStones() == 1 && table.getSlots().get(to).getColor() != currentPlayer) {
+            table.getSlots().get(to).setColor(currentPlayer);
+            table.moveOnSide(currentPlayer);
+        }
+        else {
+            table.getSlots().get(to).addStone();
+            table.getSlots().get(to).setColor(currentPlayer);
         }
     }
 
