@@ -443,9 +443,9 @@ public class GUI extends JPanel implements Design {
 
         if(!game.isMoveDone()) {
             if(game.getCurrentPlayer() == "BLACK")
-                table.drawString("Black's turn'", 330, 25);
+                table.drawString(game.getFirstPlayer() + "'s turn (BLACK)", 330, 25);
             else if(game.getCurrentPlayer() == "WHITE")
-                table.drawString("White's turn", 330, 25);
+                table.drawString(game.getSecondPlayer() + "'s turn (WHITE)", 330, 25);
         }
     }
 

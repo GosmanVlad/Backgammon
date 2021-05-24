@@ -13,11 +13,6 @@ public class Main {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
         Table table = new Table();
-        JFrame gameFrame = new JFrame();
-        gameFrame.setTitle("Backgammon Game");
-        gameFrame.setSize(800, 600);
-        gameFrame.add(new GUI(new Game()));
-        gameFrame.setVisible(true);
 
         Database database = Database.getInstance();
         DAOPlayer newPlayer = new DAOPlayer(database);
@@ -38,5 +33,11 @@ public class Main {
             DAOGames newGame = new DAOGames(database);
             newGame.addGame(game);
         }
+
+        JFrame gameFrame = new JFrame();
+        gameFrame.setTitle("Backgammon Game");
+        gameFrame.setSize(800, 600);
+        gameFrame.add(new GUI(new Game(firstPlayerName,secondPlayerName)));
+        gameFrame.setVisible(true);
     }
 }

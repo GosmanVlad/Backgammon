@@ -11,16 +11,28 @@ public class Game {
     private Dice dice;
     private boolean firstSelect;
     private Design design;
+    private String firstPlayer;
+    private String secondPlayer;
 
     private int slotFrom=100;
     private int slotTo=100;
 
     private boolean moveDone;
-    public Game() {
+    public Game(String firstPlayer, String secondPlayer) {
         this.dice = new Dice();
         this.table = new Table();
         currentPlayer = dice.whoMoves();
         firstSelect = true;
+        this.firstPlayer = firstPlayer;
+        this.secondPlayer = secondPlayer;
+    }
+
+    public String getFirstPlayer() {
+        return firstPlayer;
+    }
+
+    public String getSecondPlayer() {
+        return secondPlayer;
     }
 
     public void refreshDesign() {
