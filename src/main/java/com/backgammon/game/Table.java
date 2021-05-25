@@ -22,7 +22,6 @@ public class Table {
     public void addStones() {
         slots.get(0).setColor("BLACK");
         slots.get(0).setStones(0);
-
         slots.get(1).setColor("BLACK");
         slots.get(1).setStones(2);
         slots.get(6).setColor("WHITE");
@@ -39,13 +38,10 @@ public class Table {
         slots.get(21).setStones(5);
         slots.get(26).setColor("WHITE");
         slots.get(26).setStones(2);
-
         slots.get(27).setColor("WHITE");
         slots.get(27).setStones(0);
-
         slots.get(20).setColor("BLACK");
         slots.get(20).setStones(0);
-
         slots.get(7).setColor("WHITE");
         slots.get(7).setStones(0);
     }
@@ -63,17 +59,17 @@ public class Table {
         Casa jucatorului White este in dreapta jos (se verifica de la cel mai mare slot la cel mai mic)
      */
     public boolean pieceInHome(String player) {
-        if(player == "BLACK") {
+        if(player.equals("BLACK")) {
             for (int piecePos = 0; piecePos < 21; piecePos++) {
-                if (slots.get(piecePos).getStones() > 0 && slots.get(piecePos).getColor() == "BLACK") {
+                if (slots.get(piecePos).getStones() > 0 && slots.get(piecePos).getColor().equals("BLACK")) {
                     return false;
                 }
             }
             return true;
         }
-        else if(player == "WHITE") {
+        else if(player.equals("WHITE")) {
             for (int piecePos = 26; piecePos > 6; piecePos--) {
-                if (slots.get(piecePos).getStones() > 0 && slots.get(piecePos).getColor() == "WHITE") {
+                if (slots.get(piecePos).getStones() > 0 && slots.get(piecePos).getColor().equals("WHITE")) {
                     return false;
                 }
             }
@@ -83,13 +79,13 @@ public class Table {
     }
 
     public boolean onSide(String player) {
-        if(player == "BLACK") {
+        if(player.equals("BLACK")) {
             if(slots.get(7).getStones() > 0)
                 return true;
             else
                 return false;
         }
-        else if(player == "WHITE") {
+        else if(player.equals("WHITE")) {
             if(slots.get(20).getStones() > 0)
                 return true;
             else
@@ -99,7 +95,6 @@ public class Table {
     }
 
     public boolean isGameOver() {
-
         if(slots.get(27).getStones() == 15) //Black wins
         {
             winner = "BLACK";
@@ -118,7 +113,7 @@ public class Table {
     }
 
     public void moveOnSide(String player) {
-        if(player == "BLACK") {
+        if(player.equals("BLACK")) {
             slots.get(20).addStone();
             slots.get(20).setColor("WHITE");
         }

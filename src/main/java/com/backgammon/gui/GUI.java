@@ -348,7 +348,7 @@ public class GUI extends JPanel implements Design {
     public void drawMarker(Graphics graphics, int leftX, int height, String section) {
         graphics.setColor(new Color(255, 255, 204));
 
-        if(section == "bottom")
+        if(section.equals("bottom"))
             graphics.fillOval(leftX+5, height+5, 17, 17);
         else
             graphics.fillOval(leftX+5, height-20, 17, 17);
@@ -515,7 +515,7 @@ public class GUI extends JPanel implements Design {
             index++;
         }
 
-        for (int w = 0; w < 7; w++) {
+        for (int triangleNumber = 0; triangleNumber < 7; triangleNumber++) {
             printPieces(table, slot.get(index-7), leftX-(54*7), board.getSlots().get(slot.get(index-7)).getColor() , board, opponent, startPosition);
             leftX += 54;
             index++;
@@ -527,14 +527,14 @@ public class GUI extends JPanel implements Design {
         int index = 0;
         int startX = posX, startY = startPosition;
 
-        if (color == "BLACK") {
+        if (color.equals("BLACK")) {
             pieceColor = new Color(42, 41, 41);
         } else {
             pieceColor = Color.WHITE;
         }
 
         while (board.getSlots().get(slot).getStones() != 0) {
-            if (index == 5 || index == 10){
+            if (index == 5){
                 posX = startX + 4;
                 startX += 4;
                 if (opponent) {
@@ -561,22 +561,18 @@ public class GUI extends JPanel implements Design {
         }
     }
 
-    public void printTriangles(Graphics table, int leftX, int rightX, int highX, int leftY, int highY, int slot){
+    public void printTriangles(Graphics table, int leftX, int rightX, int highX, int leftY, int highY, int slot) {
 
         if (slot != 0 && slot != 7 && slot != 20 && slot != 27) {
             Polygon form = new Polygon();
             form.addPoint(leftX, leftY);
             form.addPoint(rightX, leftY);
             form.addPoint(highX, highY);
-            if(slot % 2==0)
-                table.setColor(new Color(101,53,53));
+            if (slot % 2 == 0)
+                table.setColor(new Color(101, 53, 53));
             else
-                table.setColor(new Color(159,127,127));
+                table.setColor(new Color(159, 127, 127));
             table.fillPolygon(form);
         }
     }
-
-
-
-
 }

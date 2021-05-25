@@ -63,7 +63,6 @@ public class Game {
         if(!moveDone) {
             if(moveOption()) {
                 if(checkPossibleMove(slotFrom, slotTo)) {
-                    System.out.println("TEST FROM" + slotFrom + "TEST TO" + slotTo);
                     movePiece(slotFrom, slotTo);
                     refreshDesign();
 
@@ -99,16 +98,16 @@ public class Game {
                 table.getSlots().set(from, new Slot());
                 dice.deleteDiceNumber(Math.abs(from - to));
             } else {
-                if(from == 7 && currentPlayer == "BLACK")
+                if(from == 7 && currentPlayer.equals("BLACK"))
                     dice.deleteDiceNumber(to);
-                else if(from == 20 && currentPlayer == "WHITE")
+                else if(from == 20 && currentPlayer.equals("WHITE"))
                     dice.deleteDiceNumber(Math.abs(from+7-to));
                 else
                     dice.deleteDiceNumber(Math.abs(from-to));
             }
 
             /* Mutam piesa selectata in slotul dorit + logica pe sloturi pentru "mancarea" unei piese */
-            if (table.getSlots().get(to).getStones() == 1 && table.getSlots().get(to).getColor() != currentPlayer) {
+            if (table.getSlots().get(to).getStones() == 1 && !table.getSlots().get(to).getColor().equals(currentPlayer)) {
                 table.getSlots().get(to).setColor(currentPlayer);
                 table.moveOnSide(currentPlayer);
             } else {
@@ -125,12 +124,12 @@ public class Game {
         }
 
         /* Daca slotul tinta este o mutare valida */
-        if(table.getSlots().get(to).getColor() != currentPlayer && table.getSlots().get(to).getColor() != "NONE" && table.getSlots().get(to).getStones() != 1) {
+        if(!table.getSlots().get(to).getColor().equals(currentPlayer) && !table.getSlots().get(to).getColor().equals("NONE") && table.getSlots().get(to).getStones() != 1) {
             return false;
         }
 
         /* Daca slotul selectat este culoarea jucatorului */
-        if(table.getSlots().get(from).getColor() != currentPlayer) {
+        if(!table.getSlots().get(from).getColor().equals(currentPlayer)) {
             return false;
         }
 
@@ -149,19 +148,19 @@ public class Game {
                 }
 
                 /* Daca mutarea este in directia corecta */
-                if(currentPlayer == "BLACK") {
+                if(currentPlayer.equals("BLACK")) {
                     if(to <= from) {
                         return false;
                     }
                 }
-                else if(currentPlayer == "WHITE") {
+                else if(currentPlayer.equals("WHITE")) {
                     if(to >= from) {
                         return false;
                     }
                 }
             }
             else {
-                if(currentPlayer == "BLACK") {
+                if(currentPlayer.equals("BLACK")) {
                     /* Daca jucatorul incearca sa mute o alta piesa in afara de cea de pe margine */
                     if(from != 7) {
                         return false;
@@ -172,14 +171,12 @@ public class Game {
                         return false;
                     }
                 }
-                else if(currentPlayer == "WHITE") {
+                else if(currentPlayer.equals("WHITE")) {
                     if(from != 20) {
-                        System.out.println("TEST2 - " + from);
                         return false;
                     }
 
                     if(to < 21 || to > 26) {
-                        System.out.println("TEST3 - " + to + " ");
                         return false;
                     }
                 }
@@ -191,7 +188,7 @@ public class Game {
                 return false;
             }
 
-            if(currentPlayer == "BLACK") {
+            if(currentPlayer.equals("BLACK")) {
                 if (to <= from) {
                     return false;
                 }
@@ -200,7 +197,7 @@ public class Game {
                     return false;
                 }
             }
-            else if(currentPlayer == "WHITE") {
+            else if(currentPlayer.equals("WHITE")) {
                 if (!dice.checkDice(from - to)) {
                     return false;
                 }
@@ -212,7 +209,7 @@ public class Game {
     public boolean moveOption() {
         boolean valid = false;
         int targetSlot;
-        if(currentPlayer == "BLACK") {
+        if(currentPlayer.equals("BLACK")) {
             if(!table.pieceInHome(currentPlayer)) {
                 for (int pieceIndex = 0; pieceIndex < 26; pieceIndex++) {
                     if(pieceIndex == 7)
@@ -245,7 +242,7 @@ public class Game {
                 valid = true;
             }
         }
-        if(currentPlayer == "WHITE") {
+        if(currentPlayer.equals("WHITE")) {
             if(!table.pieceInHome(currentPlayer)) {
                 for (int pieceIndex = 0; pieceIndex < 26; pieceIndex++) {
                     if(pieceIndex == 20)
@@ -280,7 +277,7 @@ public class Game {
     }
 
     public void switchTurns() {
-        if(currentPlayer == "WHITE")
+        if(currentPlayer.equals("WHITE"))
             currentPlayer = "BLACK";
         else
             currentPlayer = "WHITE";
