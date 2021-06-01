@@ -21,13 +21,13 @@ Logica generala:
 
 ## Prezentare baza de date
 - S-a creat doua tabele: players si games; In tabela players vor fi inregistrati cei doi jucatori a caror nume este introdus la inceputu jocului. In tabela games vor fi inregistrati jucatorii la finalul jocului (jucatorul1, jucatorul2 si castigatorul)
-- Dezvoltatori functionalitate: Andrei (75%), Vlad (15%)
+- Dezvoltatori functionalitate: Andrei (75%), Vlad (25%)
 
 
 ## Pozitionare click
 - In functie de pozitia click-ului dat, se identifica slotul aferent.
 
-- Dezvoltatori: Vlad (75%), Andrei (15%)
+- Dezvoltatori: Vlad (75%), Andrei (25%)
 
 ## Mutare piese
 - De adaugat posibilitatea de a muta piesele pe tabla.
